@@ -16,6 +16,14 @@ export class DatabaseService {
     // return fetch("https://rickandmortyapi.com/api/character");
     return this.http
       .get('http://localhost:3000/drivers')
+   }
 
+   getTeams() {
+    // return fetch("https://rickandmortyapi.com/api/character");
+    return this.http
+      .get('http://localhost:3000/teams')
+      
   }
+
+
 }

@@ -4,6 +4,7 @@ import { ListComponent } from './components/list/list.component';
 import { NewsComponent } from './components/news/news.component';
 import { PictureComponent } from './components/picture/picture.component';
 import { TitleComponent } from './components/title/title.component';
+import { GalleryTeamsComponent } from './components/gallery-teams/gallery-teams.component';
 
 
 
@@ -13,6 +14,7 @@ ListComponent,
 NewsComponent,
 PictureComponent,
 TitleComponent,
+GalleryTeamsComponent,
 
 
 
@@ -21,7 +23,7 @@ TitleComponent,
     CommonModule
   ],
 
-exports: [ListComponent, NewsComponent, PictureComponent, TitleComponent]
+exports: [ListComponent, NewsComponent, PictureComponent, TitleComponent,GalleryTeamsComponent]
 
 })
 export class SharedModule { }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
+import { DatabaseService } from 'src/app/core/services/database.service';
 @Component({
   selector: 'app-teams-page',
   templateUrl: './teams-page.component.html',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamsPageComponent implements OnInit {
   public titleTeams = "F1 Teams 2022";
-  constructor() { }
+teams:any;
 
-  ngOnInit(): void {
-  }
+constructor(private databaseService: DatabaseService) { }
+
+ngOnInit(): void {
+  this.databaseService.getTeams().subscribe((res: any) => {
+    console.log(res);
+    this.teams = res;
+  });
+
+}
 
 }
