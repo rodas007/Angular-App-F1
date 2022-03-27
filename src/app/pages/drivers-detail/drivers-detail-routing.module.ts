@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { DriversPageComponent } from './drivers-page.component';
+import { DriversDetailComponent } from './drivers-detail.component';
 
 const routes: Routes = [
-  {path: '', component: DriversPageComponent},
-
+  {
+ path: '',
+component: DriversDetailComponent,
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DriversPageRoutingModule { }
+export class DriversDetailRoutingModule { }

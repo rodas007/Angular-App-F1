@@ -13,17 +13,26 @@ export class DatabaseService {
   constructor(private http: HttpClient) {}
 
   getDrivers() {
-    // return fetch("https://rickandmortyapi.com/api/character");
+    
     return this.http
       .get('http://localhost:3000/drivers')
    }
 
    getTeams() {
-    // return fetch("https://rickandmortyapi.com/api/character");
+    
     return this.http
       .get('http://localhost:3000/teams')
+
+
       
   }
+
+  getIdDrivers = (idDriver: any) => {
+    return this.http.get(
+      `http://localhost:3000/drivers/${idDriver}`
+    );
+  };
+
 
 
 }

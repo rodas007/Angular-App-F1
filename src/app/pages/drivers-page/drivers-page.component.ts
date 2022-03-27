@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { DatabaseService } from 'src/app/core/services/database.service';
 
 
@@ -10,7 +10,8 @@ import { DatabaseService } from 'src/app/core/services/database.service';
 export class DriversPageComponent implements OnInit {
 
   public titleDrivers = "F1 Drivers 2022";
- drivers: any
+  @Input() driverr!: any;
+ drivers: any;
 
   constructor(private databaseService: DatabaseService) { }
 

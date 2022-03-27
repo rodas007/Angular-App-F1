@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -26,6 +27,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/gestion-page/gestion-page.module').then((m) => m.GestionPageModule),
   },
+  {
+    path: 'drivers/:idDrivers',
+    loadChildren: () =>
+      import('./pages/drivers-detail/drivers-detail.module').then((m) => m.DriversDetailModule),
+  },
+
   {  path: '**', redirectTo: '' },
   
 

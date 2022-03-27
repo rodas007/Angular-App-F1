@@ -8,6 +8,7 @@ import { GalleryTeamsComponent } from './components/gallery-teams/gallery-teams.
 
 
 
+
 @NgModule({
   declarations: [
 ListComponent,
@@ -20,7 +21,8 @@ GalleryTeamsComponent,
 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+   
   ],
 
 exports: [ListComponent, NewsComponent, PictureComponent, TitleComponent,GalleryTeamsComponent]
