@@ -27,6 +27,7 @@ export class GestionPageComponent implements OnInit {
       image: [''],
     });
   }
+  
 
   ngOnInit(): void {
     this.gestionForm.valueChanges.subscribe((changes: any) => { this.newDriver = changes; })

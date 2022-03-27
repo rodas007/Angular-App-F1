@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-gestion-detail',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gestion-detail.component.scss']
 })
 export class GestionDetailComponent implements OnInit {
-
+  @Input() newDriver: any;
   constructor() { }
 
   ngOnInit(): void {

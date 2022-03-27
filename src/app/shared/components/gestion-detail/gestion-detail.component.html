@@ -1,1 +1,9 @@
-<p>gestion-detail works!</p>
+<div class="c-product-detail" *ngIf = newDriver>
+    <img class="c-product-detail__img" *ngIf = newDriver.image  src="{{newDriver?.image}}" alt="photo">
+    <p class="c-product-detail__name" *ngIf = newDriver.givenName>Name: {{newDriver?.givenName}}</p>
+    <p class="c-product-detail__name" *ngIf = newDriver.familyName>Surname: {{newDriver?.familyName}}</p>
+    <p class="c-product-detail__name" *ngIf = newDriver.permanentNumber>Number: {{newDriver?.permanentNumber}}</p>
+    <p class="c-product-detail__name" *ngIf = newDriver.nationality>nationality: {{newDriver?.nationality}}</p>
+    <p class="c-product-detail__name" *ngIf = newDriver.id>ID: {{newDriver?.id}}</p>
+    </div>
+    

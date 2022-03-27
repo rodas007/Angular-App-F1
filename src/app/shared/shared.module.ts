@@ -25,6 +25,7 @@ GestionDetailComponent,
 
 
 
+
   ],
   imports: [
     CommonModule,
@@ -32,7 +33,7 @@ GestionDetailComponent,
    
   ],
 
-exports: [ListComponent, NewsComponent, PictureComponent, TitleComponent,GalleryTeamsComponent]
+exports: [ListComponent, NewsComponent, PictureComponent, TitleComponent,GalleryTeamsComponent,GestionDetailComponent]
 
 })
 export class SharedModule { }

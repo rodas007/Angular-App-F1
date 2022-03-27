@@ -5,6 +5,7 @@ import { GestionPageRoutingModule } from './gestion-page-routing.module';
 import { GestionPageComponent } from './gestion-page.component';
 import { HomePageModule } from '../home-page/home-page.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     GestionPageRoutingModule,
     HomePageModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ]
 
   
