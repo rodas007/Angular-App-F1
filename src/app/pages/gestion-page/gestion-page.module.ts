@@ -6,6 +6,7 @@ import { GestionPageComponent } from './gestion-page.component';
 import { HomePageModule } from '../home-page/home-page.module';
 
 
+
 @NgModule({
   declarations: [
     GestionPageComponent

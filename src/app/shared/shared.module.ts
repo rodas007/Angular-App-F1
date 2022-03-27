@@ -5,6 +5,9 @@ import { NewsComponent } from './components/news/news.component';
 import { PictureComponent } from './components/picture/picture.component';
 import { TitleComponent } from './components/title/title.component';
 import { GalleryTeamsComponent } from './components/gallery-teams/gallery-teams.component';
+import { RouterModule } from '@angular/router';
+
+
 
 
 
@@ -19,9 +22,11 @@ GalleryTeamsComponent,
 
 
 
+
   ],
   imports: [
     CommonModule,
+   RouterModule
    
   ],
 

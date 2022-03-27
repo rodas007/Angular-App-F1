@@ -4,6 +4,7 @@ import { GestionPageComponent } from './gestion-page.component';
 
 
 
+
 const routes: Routes = [
   {path: '', component: GestionPageComponent},
 ];
