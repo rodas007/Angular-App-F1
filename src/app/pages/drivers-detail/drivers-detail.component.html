@@ -1,15 +1,23 @@
 <div class="c-gallery">
-    <div class="row"> 
-      <figure  class="col-12 col-md-6 col-lg-4 col-xl-3" >
-        <img routerLink='../' class="c-gallery__img" src="{{ drivers?.image }}" alt="{{ drivers?.name }}" />
-        <figcaption class="d-flex justify-content-center">
-          <h2 class="b-text b-text--l b-text--frame">{{ drivers?.givenName }} {{ drivers?.familyName }} #{{ drivers?.permanentNumber }}</h2>
-         
-        </figcaption>
-      </figure>
-    </div>
+  <div class="row">
+    <figure class="col-12 col-md-6 col-lg-4 col-xl-3">
+      <img
+        routerLink="../"
+        class="c-gallery__img"
+        src="{{ drivers?.image }}"
+        alt="{{ drivers?.name }}"
+      />
+      <figcaption class="d-flex justify-content-center">
+        <h2 class="b-text b-text--l b-text--frame">
+          {{ drivers?.givenName }} {{ drivers?.familyName }} #{{
+            drivers?.permanentNumber
+          }}
+        </h2>
+      </figcaption>
+    </figure>
   </div>
-  
+</div>
+
 <div>
-    <a routerLink='../'>Go Back</a>
+  <a routerLink="../">Go Back</a>
 </div>

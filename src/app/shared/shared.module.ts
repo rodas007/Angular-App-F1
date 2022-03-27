@@ -6,6 +6,7 @@ import { PictureComponent } from './components/picture/picture.component';
 import { TitleComponent } from './components/title/title.component';
 import { GalleryTeamsComponent } from './components/gallery-teams/gallery-teams.component';
 import { RouterModule } from '@angular/router';
+import { GestionDetailComponent } from './components/gestion-detail/gestion-detail.component';
 
 
 
@@ -19,6 +20,7 @@ NewsComponent,
 PictureComponent,
 TitleComponent,
 GalleryTeamsComponent,
+GestionDetailComponent,
 
 
 

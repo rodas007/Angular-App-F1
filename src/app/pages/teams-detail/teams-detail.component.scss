@@ -1,0 +1,13 @@
+.c-gallery {
+
+  padding-top:20px;
+
+  &__img {
+    
+    max-width: 200%;
+    max-height: 100%;
+    border-radius: 8px;
+    border: 8px solid black;
+  }
+
+}

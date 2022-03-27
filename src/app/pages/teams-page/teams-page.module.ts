@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TeamsPageRoutingModule } from './teams-page-routing.module';
 import { TeamsPageComponent } from './teams-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { TeamsDetailComponent } from './teams-detail/teams-detail.component';
+
 
 
 
@@ -12,7 +12,7 @@ import { TeamsDetailComponent } from './teams-detail/teams-detail.component';
 @NgModule({
   declarations: [
     TeamsPageComponent,
-    TeamsDetailComponent,
+    
    
   ],
   imports: [
@@ -20,6 +20,7 @@ import { TeamsDetailComponent } from './teams-detail/teams-detail.component';
     TeamsPageRoutingModule,
     SharedModule,
     
-  ]
+  ],
+  exports: [TeamsPageComponent]
 })
 export class TeamsPageModule { }

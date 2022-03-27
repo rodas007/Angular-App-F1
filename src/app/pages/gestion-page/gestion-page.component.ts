@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { DatabaseService } from 'src/app/core/services/database.service';
 
 
 
@@ -12,38 +13,40 @@ export class GestionPageComponent implements OnInit {
 
   gestionForm!: any;
   public submitted: boolean = false;
-  public newProduct: any;
+  public newDriver: any;
 
   constructor(
     private formBuilder: FormBuilder,
-   /*  private productService: ProductsService */
+    private databaseService: DatabaseService 
   ) {
     this.gestionForm = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      price: ['', [Validators.required]],
-      description: ['', [Validators.maxLength(40)]],
-      stars: [''],
+      givenName: ['', [Validators.required]],
+      familyName: ['', [Validators.required]],
+      permanentNumber: ['', [Validators.required]],
+      nationality: ['', [Validators.required]],
       image: [''],
     });
   }
 
   ngOnInit(): void {
-    this.gestionForm.valueChanges.subscribe((changes: any) => { this.newProduct = changes; })
+    this.gestionForm.valueChanges.subscribe((changes: any) => { this.newDriver = changes; })
   }
 
   public onSubmit(): void {
     this.submitted = true;
     if (this.gestionForm.valid) {
-      this.newProduct = {
-        name: this.gestionForm.get('name').value,
-        price: this.gestionForm.get('price').value,
-        description: this.gestionForm.get('description').value,
-        stars: this.gestionForm.get('stars').value,
+      this.newDriver = {
+        givenName: this.gestionForm.get('givenName').value,
+        familyName: this.gestionForm.get('familyName').value,
+        permanentNumber: this.gestionForm.get('permanentNumber').value,
+        nationality: this.gestionForm.get('nationality').value,
         image: this.gestionForm.get('image').value,
       };
-      console.log(this.newProduct);
-     /*  this.productService.postProduct(this.newProduct).subscribe(); */
+      console.log(this.newDriver);
+       this.databaseService.postDrivers(this.newDriver).subscribe(); 
       this.submitted = false;
     }
   }
 }
+
+    
