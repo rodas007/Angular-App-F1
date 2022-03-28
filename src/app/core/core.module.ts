@@ -5,11 +5,14 @@ import { CommonModule } from '@angular/common';
 import { CoreRoutingModule } from './core-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigatorComponent } from './navigator/navigator.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
-NavigatorComponent
+NavigatorComponent,
+FooterComponent
+
 
 
   ],
@@ -20,7 +23,8 @@ NavigatorComponent
   ],
 
   exports: [
-    NavigatorComponent
+    NavigatorComponent,
+    FooterComponent
   ]
 
 
