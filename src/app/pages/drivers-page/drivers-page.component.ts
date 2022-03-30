@@ -10,16 +10,22 @@ import { DatabaseService } from 'src/app/core/services/database.service';
 export class DriversPageComponent implements OnInit {
 
   public titleDrivers = "F1 Drivers 2022";
-  @Input() driverr!: any;
+  @Input() driver!: any;
  drivers: any;
+ searchDriver!: any;
+ 
 
   constructor(private databaseService: DatabaseService) { }
 
   ngOnInit(): void {
     this.databaseService.getDrivers().subscribe((res: any) => {
-      console.log(res);
-      this.drivers = res;
+      
+      this.drivers = res.data.drivers;
+      ;
     });
   }
+
+
+
 
 }

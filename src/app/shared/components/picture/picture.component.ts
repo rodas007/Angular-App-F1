@@ -8,6 +8,9 @@ import { Component, OnInit,Input } from '@angular/core';
 export class PictureComponent implements OnInit {
 
   @Input() picture!: any;
+  filterGalery : any  = "";
+
+
   constructor() { }
 
   ngOnInit(): void {

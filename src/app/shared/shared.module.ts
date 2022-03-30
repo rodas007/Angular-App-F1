@@ -7,6 +7,9 @@ import { TitleComponent } from './components/title/title.component';
 import { GalleryTeamsComponent } from './components/gallery-teams/gallery-teams.component';
 import { RouterModule } from '@angular/router';
 import { GestionDetailComponent } from './components/gestion-detail/gestion-detail.component';
+import { FilterPipe } from './components/pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -21,6 +24,9 @@ PictureComponent,
 TitleComponent,
 GalleryTeamsComponent,
 GestionDetailComponent,
+FilterPipe,
+
+
 
 
 
@@ -29,11 +35,12 @@ GestionDetailComponent,
   ],
   imports: [
     CommonModule,
-   RouterModule
+   RouterModule,
+   FormsModule
    
   ],
 
-exports: [ListComponent, NewsComponent, PictureComponent, TitleComponent,GalleryTeamsComponent,GestionDetailComponent]
+exports: [ListComponent, NewsComponent, PictureComponent, TitleComponent,GalleryTeamsComponent,GestionDetailComponent,FilterPipe,FormsModule]
 
 })
 export class SharedModule { }

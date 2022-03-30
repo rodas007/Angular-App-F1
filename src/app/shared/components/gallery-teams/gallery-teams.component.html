@@ -1,6 +1,6 @@
 <div class="c-gallery">
     <div class="row">
-      <figure class="col-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let item of teams" routerLink="{{item.id}}">
+      <figure class="col-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let item of teams" routerLink="{{item.id}}" >
         <img  class="c-gallery__img" src="{{ item.image }}" alt="{{ item.name }}" />
         <figcaption class="d-flex justify-content-center">
           <h2 class="b-text b-text--l b-text--frame">{{ item.name }} </h2>

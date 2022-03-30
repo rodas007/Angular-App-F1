@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { DriversPageRoutingModule } from './drivers-page-routing.module';
 import { DriversPageComponent } from './drivers-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -20,6 +22,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     DriversPageRoutingModule,
     SharedModule,
+    FormsModule
 
   ],
 

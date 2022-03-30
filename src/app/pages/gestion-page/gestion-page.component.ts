@@ -14,17 +14,18 @@ export class GestionPageComponent implements OnInit {
   gestionForm!: any;
   public submitted: boolean = false;
   public newDriver: any;
+  public driverId: any = this.databaseService.defaultDriver._id;
 
   constructor(
     private formBuilder: FormBuilder,
     private databaseService: DatabaseService 
   ) {
     this.gestionForm = this.formBuilder.group({
-      givenName: ['', [Validators.required]],
-      familyName: ['', [Validators.required]],
-      permanentNumber: ['', [Validators.required]],
-      nationality: ['', [Validators.required]],
-      image: [''],
+      givenName: [this.databaseService.defaultDriver.givenName, [Validators.required]],
+      familyName: [this.databaseService.defaultDriver.familyName, [Validators.required]],
+      permanentNumber: [this.databaseService.defaultDriver.permanentNumber, [Validators.required]],
+      nationality: [this.databaseService.defaultDriver.nationality, [Validators.required]],
+      image: [this.databaseService.defaultDriver.image,], 
     });
   }
   
@@ -36,6 +37,7 @@ export class GestionPageComponent implements OnInit {
   public onSubmit(): void {
     this.submitted = true;
     if (this.gestionForm.valid) {
+     
       this.newDriver = {
         givenName: this.gestionForm.get('givenName').value,
         familyName: this.gestionForm.get('familyName').value,
@@ -43,10 +45,21 @@ export class GestionPageComponent implements OnInit {
         nationality: this.gestionForm.get('nationality').value,
         image: this.gestionForm.get('image').value,
       };
+      if(this.databaseService.defaultDriver._id === undefined) {
       console.log(this.newDriver);
        this.databaseService.postDrivers(this.newDriver).subscribe(); 
       this.submitted = false;
+      this.gestionForm.reset();
+      alert("Driver created successfully");
+      
+    } else {
+this.databaseService.putDriver(this.newDriver, this.driverId).subscribe();
+alert("Actualizado");
+this.gestionForm.reset();
+
+
     }
+  }
   }
 }
 

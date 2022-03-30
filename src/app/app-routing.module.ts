@@ -38,6 +38,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/teams-page/page/teams-detail/teams-detail.module').then((m) => m.TeamsDetailModule),
   },
+  
 
   {  path: '**', redirectTo: '' },
   

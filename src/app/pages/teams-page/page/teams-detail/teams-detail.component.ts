@@ -16,11 +16,11 @@ ngOnInit(): void {
 this.route.paramMap.subscribe((params) => {
 
 const idTeam = params.get ('idTeams');
-console.log(idTeam);
+
 this.databaseService.getIdTeams(idTeam).subscribe((idTeamData) =>{
 
 this.teams = idTeamData;
-
+console.log(this.teams);
 });
 
 });

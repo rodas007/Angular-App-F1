@@ -17,7 +17,7 @@ constructor(private databaseService: DatabaseService) { }
 ngOnInit(): void {
   this.databaseService.getTeams().subscribe((res: any) => {
     console.log(res);
-    this.teams = res;
+    this.teams = res.data.escuderias;
   });
 
 }
