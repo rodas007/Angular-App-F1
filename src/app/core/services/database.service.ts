@@ -29,25 +29,25 @@ defaultDriver: any ={
   getDrivers() {
     
     return this.http
-      .get('http://localhost:5000/drivers')
+      .get('https://backend-f1-api.vercel.app/drivers')
    }
 
    getTeams() {
     
     return this.http
-      .get('http://localhost:5000/escuderias')
+      .get('https://backend-f1-api.vercel.app/escuderias')
 
   }
 
   getIdDrivers = (idDriver: any) => {
     return this.http.get(
-      `http://localhost:5000/drivers/${idDriver}`
+      `https://backend-f1-api.vercel.app/drivers/${idDriver}`
     );
   };
 
   delIdDrivers(_id: any){
     return this.http.delete(
-      "http://localhost:5000/drivers/" + _id);
+      "https://backend-f1-api.vercel.app/drivers/" + _id);
 
      
   };
@@ -55,7 +55,7 @@ defaultDriver: any ={
 
   getIdTeams = (idTeam: any) => {
     return this.http.get(
-      `http://localhost:5000/escuderias/${idTeam}`
+      `https://backend-f1-api.vercel.app/escuderias/${idTeam}`
     );
   };
 
@@ -65,7 +65,7 @@ defaultDriver: any ={
   postDrivers(newDriver:any) {
     
     return this.http
-      .post('http://localhost:5000/drivers',newDriver)
+      .post('https://backend-f1-api.vercel.app/drivers',newDriver)
   }
 
 
@@ -76,7 +76,7 @@ console.log(this.defaultDriver);
 }
 
 putDriver(editDriver:any, driverID:any){ 
-  return this.http.put("http://localhost:5000/drivers/" + driverID, editDriver)
+  return this.http.put("https://backend-f1-api.vercel.app/drivers/" + driverID, editDriver)
 
 
 }

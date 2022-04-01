@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { GestionDetailComponent } from './components/gestion-detail/gestion-detail.component';
 import { FilterPipe } from './components/pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import {InputTextModule} from 'primeng/inputtext';
 
 
 
@@ -32,12 +33,14 @@ FilterPipe,
 
 
 
+
+
   ],
   imports: [
     CommonModule,
    RouterModule,
-   FormsModule
-   
+   FormsModule,
+   InputTextModule
   ],
 
 exports: [ListComponent, NewsComponent, PictureComponent, TitleComponent,GalleryTeamsComponent,GestionDetailComponent,FilterPipe,FormsModule]

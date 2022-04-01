@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomePageRoutingModule } from './home-page-routing.module';
 import { HomePageComponent } from './home-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import {InputTextModule} from 'primeng/inputtext';
 
 
 
@@ -16,6 +17,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     HomePageRoutingModule,
     SharedModule,
+    InputTextModule
   ],
     exports: [HomePageComponent]
   

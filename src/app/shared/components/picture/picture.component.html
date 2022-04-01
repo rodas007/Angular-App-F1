@@ -1,10 +1,17 @@
 <div class="c-gallery">
-  <div  class="d-flex justify-content-center">
-    <input  type="text"   placeholder="Buscar..." [(ngModel)]="filterGalery" name="filterGalery"    >
+  <div  class=" d-flex justify-content-center p-inputtext-lm pb-4 pt-4">
+    <div class="p-input-icon-right" >
+    <i class="pi  pi-search"></i>
+    <input    type="text"  pInputText  placeholder="Search Driver..." [(ngModel)]="filterGalery"  name="filterGalery"  />
   </div>
+  </div>
+
+ 
+
+
   <div class="row">
-    <figure class="col-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let item of picture | filter:filterGalery"  routerLink="{{item.id}}"  >
-      <img  class="c-gallery__img" src="{{ item.image }}" alt="{{ item.name }}" />
+    <figure class="col-12 col-md-6 col-lg-4 col-xl-3 "  *ngFor="let item of picture | filter:filterGalery"  routerLink="{{item.id}}"  >
+      <img  class="c-gallery__img " src="{{ item.image }}" alt="{{ item.name }}" />
       <figcaption class="d-flex justify-content-center">
         <h2 class="b-text b-text--l b-text--frame">{{ item.givenName }} {{ item.familyName }} #{{ item.permanentNumber }}</h2>
        

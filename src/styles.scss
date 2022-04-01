@@ -1,8 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
-    padding: 0;
-  }
+
   
   a {
     text-decoration: none;
@@ -11,14 +7,25 @@
   li {
     list-style-type: none;
   }
+
+  h1{
+    text-decoration: none;
+  }
   
   
   //GLOBAL
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+  //@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+  
+   // @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
   
   body{
-      font-family: 'Poppins', sans-serif;
+      margin: 0px;
+      font-family: 'Racing Sans One', cursive, sans-serif;
   }
 
   @import "~bootstrap/scss/bootstrap-grid";
+  @import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/lara-light-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
   
