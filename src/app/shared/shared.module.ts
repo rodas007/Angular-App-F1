@@ -10,6 +10,7 @@ import { GestionDetailComponent } from './components/gestion-detail/gestion-deta
 import { FilterPipe } from './components/pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import {InputTextModule} from 'primeng/inputtext';
+import { FilterTeamPipe } from './components/pipes/filter-team.pipe';
 
 
 
@@ -26,6 +27,7 @@ TitleComponent,
 GalleryTeamsComponent,
 GestionDetailComponent,
 FilterPipe,
+FilterTeamPipe
 
 
 

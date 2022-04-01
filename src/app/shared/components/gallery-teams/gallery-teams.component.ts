@@ -7,6 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class GalleryTeamsComponent implements OnInit {
   @Input() teams!: any;
+  filterGalery : any  = "";
 
 
 
