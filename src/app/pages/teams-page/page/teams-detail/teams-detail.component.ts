@@ -20,7 +20,7 @@ const idTeam = params.get ('idTeams');
 this.databaseService.getIdTeams(idTeam).subscribe((idTeamData) =>{
 
 this.teams = idTeamData;
-console.log(this.teams);
+//console.log(this.teams);
 });
 
 });

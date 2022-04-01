@@ -72,7 +72,7 @@ defaultDriver: any ={
 
 updateInfo(item:any){
 this.defaultDriver= item;
-console.log(this.defaultDriver);
+//console.log(this.defaultDriver);
 }
 
 putDriver(editDriver:any, driverID:any){ 

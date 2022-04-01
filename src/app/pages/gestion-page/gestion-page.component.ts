@@ -46,7 +46,7 @@ export class GestionPageComponent implements OnInit {
         image: this.gestionForm.get('image').value,
       };
       if(this.databaseService.defaultDriver._id === undefined) {
-      console.log(this.newDriver);
+      //console.log(this.newDriver);
        this.databaseService.postDrivers(this.newDriver).subscribe(); 
       this.submitted = false;
       this.gestionForm.reset();

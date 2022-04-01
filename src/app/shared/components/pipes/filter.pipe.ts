@@ -13,7 +13,7 @@ if  (value){
       if (item.givenName.toLowerCase().indexOf(arg) > -1) {
         resultSearcher.push(item);
       }
-      console.log("pipe busqueda"+ resultSearcher);
+      //console.log("pipe busqueda"+ resultSearcher);
     }       
       
     return resultSearcher;

@@ -23,7 +23,7 @@ const idDriver = params.get ('idDrivers');
 this.databaseService.getIdDrivers(idDriver).subscribe((idDriverData) =>{
   
   this.drivers = idDriverData;
-console.log("aquii pilotos", this.drivers)
+//console.log("aquii pilotos", this.drivers)
 
 
 });
