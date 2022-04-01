@@ -1,10 +1,11 @@
 <div class="c-gallery">
   <div class="row">
     <figure class="col-12 col-md-6 col-lg-4 col-xl-3">
-    <img routerLink="../" class="c-gallery__img" src="{{ drivers?.data.drivers.image }}" alt="{{ drivers?.data.drivers.driverId }}" />
+    
       <figcaption class="d-flex justify-content-center">
-       
+        <img routerLink="../" class="c-gallery__img" src="{{ drivers?.data.drivers.image }}" alt="{{ drivers?.data.drivers.driverId }}" />
       </figcaption>
+      
       <h2 class="b-text b-text--l b-text--frame">
         {{ drivers?.data.drivers.givenName }} {{ drivers?.data.drivers.familyName }} #{{
           drivers?.data.drivers.permanentNumber
@@ -13,16 +14,16 @@
       <h3 class="b-text b-text--l b-text--frame">Nationality - {{ drivers?.data.drivers.nationality }}</h3>
       <h3 class="b-text b-text--l b-text--frame">Date Of Birth - {{ drivers?.data.drivers.dateOfBirth }}</h3>
       <a href="{{ drivers?.data.drivers.url }}">More information...</a>
+    
     </figure>
    
   </div>
- 
+
 </div>
 
-<div class="button" >
-  <button (click)="onDelete(drivers?.data.drivers._id)">Borrar</button>
-</div>
+<div class="c-button" >
+  
+  <button pButton type="button" label="Borrar Piloto" class="p-button-danger" (click)="onDelete(drivers?.data.drivers._id)"></button>
 
-<div class="button" >
-  <button (click)="onUpdate(drivers.data.drivers)" routerLink="/gestion">Editar</button>
+  <button pButton type="button" label="Actualizar Piloto"  (click)="onUpdate(drivers.data.drivers)" routerLink="/gestion" ></button>
 </div>

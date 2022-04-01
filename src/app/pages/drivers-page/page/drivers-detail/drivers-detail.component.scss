@@ -1,6 +1,8 @@
 .c-gallery {
   cursor: pointer;
     padding-top:20px;
+    justify-content: center;
+    justify-items: center;
   
     &__img {
       cursor: pointer;
@@ -12,3 +14,8 @@
   
   }
   
+  .c-button{
+
+  display:flex;
+  gap: 20px;
+  }
